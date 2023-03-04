@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verify Email</title>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <h2>Verify your email address</h2>
+                <p class="description">We emailed you a four-digit code to arthur@email.com.<br> Enter the code below to
+                    confirm your email address</p>
+                <div class="inputs">
+                    <input type="text" placeholder="0">
+                    <input type="text" placeholder="0">
+                    <input type="text" placeholder="0">
+                    <input type="text" placeholder="0">
+                </div>
+                <div class="information">
+                    Make sure to keep this window open while we check
+                </div>
+                <button class="flip-button" onclick="flipCard()">Check Code</button>
+            </div>
+            <div class="back">
+                <h2>Verify your email address</h2>
+                <p class="description">To verify your email address enter this code in your browser</p>
+                <div class="code">
+                    2844
+                </div>
+                <div class="information">
+                    If you did't request a code, you can safely ignore this email
+                </div>
+                <button class="flip-button" onclick="flipCard()">Enter Code</button>
+                <div class="questions">
+                    Questions?<a href="#">We're here to help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

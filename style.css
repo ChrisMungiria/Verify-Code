@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    text-align: center;
+    display: grid;
+    border: 3px solid rgb(58, 58, 58);
+    box-shadow: 10px 10px 10px rgb(163, 163, 170);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.front:hover,
+.back:hover {
+    box-shadow: 10px 20px 20px rgb(163, 163, 170);
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.description {
+    font-size: 10px;
+    color: #777;
+}
+
+.flip-button {
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    background-color: #6b68c5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.flip-button:hover {
+    background-color: #4a4888;
+    box-shadow: 0px 5px 15px #6b68c5;
+}
+
+.inputs {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    font-size: 25px;
+    cursor: pointer;
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 10px 10px 0.1px rgb(73, 73, 117, .4);
+}
+
+.information {
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px 10px;
+    margin-top: 30px;
+    font-size: 10px;
+    background-color: rgb(214, 214, 214);
+    color: rgb(120, 120, 154);
+    border-radius: 3px;
+}
+
+.code {
+    justify-self: center;
+    background-color: rgb(232, 232, 232);
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: #555555;
+    padding: 4px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.questions {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+    color: #3442db;
+}
+
+button[type=submit] {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button[type=submit]:hover {
+    background-color: #2980b9;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Flip animation */
+.card-container.flipFunction .card {
+    transform: rotateY(180deg);
+}
